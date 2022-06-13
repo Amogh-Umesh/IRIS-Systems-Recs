@@ -84,7 +84,10 @@ MYSQL_ROOT_HOST='%'
     docker run --env-file iris_mysql.env --expose 3306 --name railsmysql mysql:5.7
     ```
     * Check if the database is running by connceting to it from the host by using the appropriate password.
-    * Once the database is up and running, run the following command:
+    * Once the database is up and running, run the following commands:
+    ```bash
+    docker build -t iris_shopping_app ./Shopping-App-IRIS
+    ```
 
     ```bash
     docker run --env-file iris_app.env --link railsmysql:db -p 8080:3000 --name railsapp iris_shopping_app bash -C '/usr/bin/deploy.sh'
