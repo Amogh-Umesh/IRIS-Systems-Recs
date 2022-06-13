@@ -83,7 +83,7 @@ MYSQL_ROOT_HOST='%'
     ```bash
     docker run --env-file iris_mysql.env --expose 3306 --name railsmysql mysql:5.7
     ```
-    * Check if the database is running by connceting to it from the hist by using the appropriate password.
+    * Check if the database is running by connceting to it from the host by using the appropriate password.
     * Once the database is up and running, run the following command:
 
     ```bash
