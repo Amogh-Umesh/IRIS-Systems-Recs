@@ -67,3 +67,5 @@
 * `docker compose down` brings down all containers and removes them from docker.
 * `docker compose stop` stops all containers of the app.
 * `docker compose start` starts all containers of the app.
+* Output of docker compose:
+![docker compose](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/blob/docker-compose/docker-compose.png?raw=true)
