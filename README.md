@@ -64,4 +64,4 @@ MYSQL_ROOT_HOST='%'
     ```
 * Check if the app is running by visiting http://localhost:8080/
 
-![Running App] app.png
+![Running App](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/blob/set_up_db/app.png?raw=true)
