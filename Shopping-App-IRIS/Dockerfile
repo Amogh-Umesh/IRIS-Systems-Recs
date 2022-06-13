@@ -8,7 +8,7 @@ RUN bundle update
 
 RUN bundle install
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
     && apt install -y nodejs
 
 COPY initialize.sh /usr/bin/
