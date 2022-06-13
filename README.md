@@ -81,4 +81,5 @@ http {
 * If we need requests to be passed through to one instance more than the other, we can do so by setting a weight property after the server name in the upstream section.
 * All the running containers:
 ![running containers](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/blob/nginx_load_balancer/running%20services.png?raw=true)
+* Running App:
 ![Running App](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/blob/set_up_db/app.png?raw=true)
