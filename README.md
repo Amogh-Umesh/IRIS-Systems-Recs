@@ -19,7 +19,7 @@
     ```
 * add to tempcron file
     ```bash
-    echo "0 0     * * *   root    /usr/bin/cronjob" >> tempcron
+    echo "0 0     * * *   root    /usr/bin/cronjob.sh" >> tempcron
     ```
 * install new cron file
     ```bash
