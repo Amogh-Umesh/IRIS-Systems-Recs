@@ -13,7 +13,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
 
 COPY initialize.sh /usr/bin/
 
-RUN chmod 777 /usr/local/bin/initialize.sh
+RUN chmod 777 /usr/bin/initialize.sh
 
 COPY . .
 
