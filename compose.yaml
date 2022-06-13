@@ -42,7 +42,7 @@ services:
       - railsapp0
       - railsapp1
       - railsapp2
-    ports:
+    expose:
       - "8080:8080"
     links:
       - railsapp0:railsserver0
