@@ -9,8 +9,35 @@
   * Environment Variables: MYSQL_ROOT_PASSWORD=iris &
 MYSQL_ROOT_HOST='%'
   * ports: 3306
+* Create iris_app.env and iris_mysql.env with the following content:
+  ```bash
+  MYSQL_USERNAME=root
+  MYSQL_PASSWORD=iris
+  SHOP1_DATABASE_PASSWORD=shop1
+  ```
+  and
+  ```bash
+  MYSQL_ROOT_PASSWORD=iris
+  MYSQL_ROOT_HOST='%'
+  ```
+* Create a deploy.sh file in the app directory with the following content:
+  ```bash
+  #!/bin/bash
+  set -e
+  # cd /iris_shopping_app
+  echo "Setting up Database server"
+  bundle exec rake db:create --trace
+  bundle exec rake db:migrate --trace
+  echo "Database server ready"
+  rails server -b 0.0.0.0
+  ```
+* Add the following lines to Dockerfile before Entrypoint: 
+  ```Dockerfile
+  ADD deploy.sh /usr/bin/deploy.sh
 
-* This can be done easy by using a docker compose or by running some commands.
+  RUN chmod 777 /usr/bin/deploy.sh
+  ```
+* Starting containers can be done easy by using a docker compose or by running some commands.
 * By Using Docker Compose:
     * Create a file called compose.yaml
     ```yaml
