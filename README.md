@@ -12,8 +12,21 @@
 * Task 7: [Nginx-Rate-Limiting](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/Nginx-Rate-Limiting)
 * Task 8: [Cronjob](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/Cronjob)
 
-Note: To read a Task x, please visit tasks 0 to x-1 first.
+Note: To read a Task x, please visit tasks 1 to x-1 first.
 
+## Running the app:
+* Run the following commands:
+```bash
+git clone https://github.com/Amogh-Umesh/IRIS-Systems-Recs.git
+```
+```bash
+cd IRIS-Systems-Recs
+```
+```bash
+docker compose up
+```
+
+## Screenshots:
 * Final Running app:
 ![Running App](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/blob/set_up_db/app.png?raw=true)
 
