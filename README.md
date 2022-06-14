@@ -1,46 +1,28 @@
 # IRIS-Systems-Recs
-## Task 8: Setup a cronjob to create backups of the database every day:
-### Steps:
-* Create a new file called `cronjob.sh` wih the following content:
-    ```bash
-    cd /home/amogh/IRIS/SystemsRecs/Repo
-    docker compose exec railsmysql bash -c 'mysqldump -p$MYSQL_ROOT_PASSWORD --all-databases' > "/home/amogh/IRIS/SystemsRecs/backups/backup_$(date +"%d_%m_%Y")"
-    ```
-* Now run the following commands:
-    ```bash
-    sudo cp cronjob.sh /usr/bin/
-    ```
-    ```bash
-    sudo chmod 777 /usr/bin/cronjob.sh
-    ```
-* write out current crontab
-    ```bash
-    crontab -l > tempcron
-    ```
-* add to tempcron file
-    ```bash
-    echo "0 0     * * *   root    /usr/bin/cronjob.sh" >> tempcron
-    ```
-* install new cron file
-    ```bash
-    crontab tempcron
-    ```
-* remove tempcron file
-    ```bash
-    rm tempcron
-    ```
-* create backup directory:
-    ```bash
-    mkdir /home/amogh/IRIS/SystemsRecs/backups
-    ```
-* Check the cronjob is added:
-    ```bash
-    crontab -l
-    ```
-* Manually create backup:
-    ```bash
-    cronjob.sh
-    ```
-* This creates a backup once every day and names the backup with the date of the day.
-* The backup:
+### Name: Amogh Umesh
+### Email: amoghumesh02@gmail.com
+
+### The different tasks are in different branches:
+* Task 1: [dockerize](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/dockerize)
+* Task 2: [set_up_db](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/set_up_db)
+* Task 3: [ReverseProxy](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/ReverseProxy)
+* Task 4: [nginx_load_balancer](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/nginx_load_balancer)
+* Task 5: [persistence](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/persistence)
+* Task 6: [docker-compose](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/docker-compose)
+* Task 7: [Nginx-Rate-Limiting](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/Nginx-Rate-Limiting)
+* Task 8: [Cronjob](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/tree/Cronjob)
+
+Note: To read a Task x, please visit tasks 0 to x-1 first.
+
+* Final Running app:
+![Running App](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/blob/set_up_db/app.png?raw=true)
+
+* Docker compose output:
+![docker compose](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/blob/docker-compose/docker-compose.png?raw=true)
+
+* Running containers:
+![running containers](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/blob/nginx_load_balancer/running%20services.png?raw=true)
+ 
+* The backups:
 ![backup](https://github.com/Amogh-Umesh/IRIS-Systems-Recs/blob/Cronjob/backup.png?raw=true)
+
